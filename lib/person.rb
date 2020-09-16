@@ -32,6 +32,39 @@ class Person
          end 
 
          def happy?
-            if hygiene
+            if @happiness > 7
+                return true
+            else
+                return false
+            end
+        end
 
+        def clean?
+            if @hygiene > 7
+                return true
+            else
+                return false
+            end
+        end
+
+        def get_paid(salary = 100)
+            @bank_account += salary
+            "all about the benjamins"
+        end
+
+        def take_bath
+            self.hygiene += 4
+            if @hygiene > 10
+                @hygiene = 10
+            end
+            "♪ Rub-a-dub just relaxing in the tub ♫"
+        end
+
+        def work_out
+            self.hygiene -= 3
+            self.happiness += 2
+            "♪ another one bites the dust ♫"
+        end
+
+        
 end 
